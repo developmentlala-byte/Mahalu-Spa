@@ -1,4 +1,4 @@
-# 🌸 Mahalau Spa Website (Frontend)
+# 🌸 Mahalau Spa Website
 
 This repository contains the **Frontend source code** for the official Mahalau Spa website. The project serves as a digital storefront, providing information on services, a gallery, and an interface for online booking (which connects to an external API).
 

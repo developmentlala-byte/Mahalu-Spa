@@ -78,8 +78,7 @@ This project is licensed under the **MIT License**. See the [LICENSE.md](LICENSE
 ## 📞 Contact
 
 For inquiries or support, please contact us at:
-- **Email:** info@mahalauspa.com
-- **Website:** [www.mahalauspa.com](https://www.mahalauspa.com)
+- **Email:** mahaluspa@gmail.com
 
 ---
 

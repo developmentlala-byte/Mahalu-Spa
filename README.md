@@ -69,12 +69,6 @@ We welcome internal pull requests for bug fixes, UI/UX improvements, and code qu
 
 ---
 
-## 📄 License
-
-This project is licensed under the **MIT License**. See the [LICENSE.md](LICENSE.md) file for more details.
-
----
-
 ## 📞 Contact
 
 For inquiries or support, please contact us at:

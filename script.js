@@ -326,7 +326,7 @@ Halo Admin, ada booking baru:
 Mohon konfirmasi booking ini. Terima kasih! 🙏`;
 
       // Open WhatsApp
-      const whatsappNumber = "+6281283924868";
+      const whatsappNumber = "+6289609094700";
       const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(message)}`;
 
       // Add loading state to button
@@ -375,7 +375,7 @@ Mohon informasi lebih lanjut mengenai ketersediaan jadwal dan layanan yang terse
 
 Terima kasih! 🙏`;
 
-    const whatsappNumber = "+6281283924868";
+    const whatsappNumber = "+6289609094700";
     const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(bookingMessage)}`;
 
     // Handle navbar booking buttons (redirect to booking section)

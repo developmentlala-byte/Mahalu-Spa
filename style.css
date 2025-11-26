@@ -1,17 +1,15 @@
-/* Custom CSS for Mahalu Spa */
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Body and base styles */
+
 body {
   line-height: 1.6;
   font-weight: 300;
 }
 
-/* Navbar styles */
+
 #navbar {
   background: transparent;
   backdrop-filter: blur(10px);
@@ -23,7 +21,7 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Navigation links */
+
 .nav-link {
   position: relative;
   font-weight: 400;
@@ -46,7 +44,7 @@ body {
   width: 100%;
 }
 
-/* Booking button */
+
 .booking-btn {
   font-weight: 500;
   letter-spacing: 0.5px;
@@ -57,7 +55,8 @@ body {
   box-shadow: 0 6px 20px rgba(196, 122, 83, 0.4);
 }
 
-/* Hero section */
+
+
 .hero-section {
   position: relative;
   background-attachment: fixed;
@@ -91,7 +90,7 @@ body {
   box-shadow: 0 6px 20px rgba(196, 122, 83, 0.3);
 }
 
-/* Animations */
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -114,7 +113,8 @@ body {
   }
 }
 
-/* Service cards */
+
+
 .service-card {
   transition: all 0.3s ease;
   border: 1px solid rgba(196, 122, 83, 0.1);
@@ -125,7 +125,8 @@ body {
   box-shadow: 0 10px 30px rgba(196, 122, 83, 0.15);
 }
 
-/* Gallery items */
+
+
 .gallery-item {
   overflow: hidden;
   transition: all 0.3s ease;
@@ -136,7 +137,8 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Testimonial cards */
+
+
 .testimonial-card {
   transition: all 0.3s ease;
   border: 1px solid rgba(196, 122, 83, 0.1);
@@ -147,7 +149,8 @@ body {
   box-shadow: 0 10px 25px rgba(196, 122, 83, 0.1);
 }
 
-/* Mobile menu */
+
+
 #mobile-menu {
   transition: all 0.3s ease;
   background: rgba(196, 122, 83, 0.95);
@@ -156,7 +159,8 @@ body {
   border-radius: 0 0 1rem 1rem;
 }
 
-/* Responsive adjustments */
+
+
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem;
@@ -177,7 +181,8 @@ body {
   }
 }
 
-/* Prevent horizontal overflow on mobile */
+
+
 html,
 body {
   max-width: 100%;
@@ -190,12 +195,13 @@ iframe {
   display: block;
 }
 
-/* Smooth transitions for all interactive elements */
+
+
 * {
   transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Focus states for accessibility */
+
 .nav-link:focus,
 .booking-btn:focus,
 .hero-btn-primary:focus,
@@ -204,7 +210,7 @@ iframe {
   outline-offset: 2px;
 }
 
-/* Custom scrollbar */
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -222,23 +228,23 @@ iframe {
   background: #d98e6b;
 }
 
-/* Selection color */
+
 ::selection {
   background: rgba(196, 122, 83, 0.3);
   color: #3f3225;
 }
 
-/* Soft shadows */
+
 .shadow-soft {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Text shadows for better readability */
+
 .text-shadow {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* Elegant hover effects */
+
 .hover-lift:hover {
   transform: translateY(-2px);
 }
@@ -247,23 +253,23 @@ iframe {
   transform: scale(1.05);
 }
 
-/* Loading animation */
+
 .loading {
   opacity: 0.7;
   pointer-events: none;
 }
 
-/* Fade in animation for sections */
+
 .fade-in {
   animation: fadeIn 0.3s ease-out;
 }
 
-/* Gradient overlays */
+
 .gradient-overlay {
   background: linear-gradient(135deg, rgba(196, 122, 83, 0.1) 0%, rgba(241, 229, 208, 0.1) 100%);
 }
 
-/* Button pulse effect */
+
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 rgba(196, 122, 83, 0.4);
@@ -282,7 +288,7 @@ iframe {
   animation: pulse 1.5s infinite;
 }
 
-/* Hero slideshow */
+
 .hero-slideshow {
   position: absolute;
   inset: 0;
@@ -302,14 +308,14 @@ iframe {
   opacity: 1;
 }
 
-/* Testimonial carousel (square cards refinement) */
+
 .testimonial-carousel {
   overflow: hidden;
   position: relative;
   --card-size: clamp(220px, 60vw, 260px);
   --card-padding: clamp(1rem, 2.5vw, 1.5rem);
   --card-bg: rgba(255, 255, 255, 0.93);
-  /* Neutral overlay color (remove beige tint) */
+  
   --overlay-color: 255, 255, 255;
 }
 
@@ -324,7 +330,7 @@ iframe {
   backface-visibility: hidden;
 }
 
-/* Square/near-square card sizing and layout */
+
 .testimonial-carousel .testimonial-card {
   flex: 0 0 var(--card-size);
   width: var(--card-size);
@@ -340,7 +346,7 @@ iframe {
   background: var(--card-bg);
 }
 
-/* Clamp quote text to keep square feel */
+
 .testimonial-carousel .testimonial-card p {
   display: -webkit-box;
   -webkit-line-clamp: 4;
@@ -348,13 +354,13 @@ iframe {
   overflow: hidden;
 }
 
-/* Marquee keyframes for continuous RTL scroll */
+
 @keyframes testimonial-marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
-/* Tuning for mobile */
+
 @media (max-width: 768px) {
   .testimonial-carousel .carousel-track {
     animation-duration: 60s;
@@ -364,13 +370,13 @@ iframe {
   .testimonial-carousel .testimonial-card { -webkit-line-clamp: 5; }
 }
 
-/* Tuning for desktop */
+
 @media (min-width: 1024px) {
   .testimonial-carousel { --card-size: 280px; }
   .testimonial-carousel .carousel-track { gap: clamp(1rem, 1.5vw, 1.25rem); }
 }
 
-/* Testimonial carousel fade overlays */
+
 .testimonial-carousel {
   position: relative;
 }
@@ -385,7 +391,7 @@ iframe {
   pointer-events: none;
 }
 
-/* Left edge fade (smoother multi-stop) */
+
 .testimonial-carousel::before {
   left: 0;
   background: linear-gradient(
@@ -399,7 +405,7 @@ iframe {
   );
 }
 
-/* Right edge fade (smoother multi-stop) */
+
 .testimonial-carousel::after {
   right: 0;
   background: linear-gradient(
@@ -413,18 +419,18 @@ iframe {
   );
 }
 
-/* Ensure track sits under overlays */
+
 .testimonial-carousel .carousel-track {
   position: relative;
   z-index: 1;
 }
 
-/* Reduce header bottom margin inside cards for compact layout */
+
 .testimonial-carousel .testimonial-card .mb-4 {
   margin-bottom: 0.5rem;
 }
 
-/* Compact paragraph spacing and balanced line height */
+
 .testimonial-carousel .testimonial-card p {
   display: -webkit-box;
   -webkit-line-clamp: 5;

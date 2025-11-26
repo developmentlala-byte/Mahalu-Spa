@@ -1,12 +1,9 @@
-// Mahalu Spa JavaScript
-
+// Navbar & menu
 document.addEventListener("DOMContentLoaded", function () {
-  // Navbar scroll effect
   const navbar = document.getElementById("navbar");
   const mobileMenuBtn = document.getElementById("mobile-menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
 
-  // Handle navbar background on scroll
   function handleNavbarScroll() {
     if (window.scrollY > 50) {
       navbar.classList.add("scrolled");
@@ -15,17 +12,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Mobile menu toggle
   function toggleMobileMenu() {
     mobileMenu.classList.toggle("hidden");
   }
 
-  // Close mobile menu when clicking on links
   function closeMobileMenu() {
     mobileMenu.classList.add("hidden");
   }
 
-  // Smooth scrolling for navigation links
   function smoothScroll(target) {
     const element = document.querySelector(target);
     if (element) {
@@ -39,11 +33,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Event listeners
   window.addEventListener("scroll", handleNavbarScroll);
   mobileMenuBtn.addEventListener("click", toggleMobileMenu);
 
-  // Add smooth scrolling to all navigation links
   const navLinks = document.querySelectorAll(".nav-link");
   navLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
@@ -54,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Add smooth scrolling to hero buttons
   const heroButtons = document.querySelectorAll(".hero-btn-primary, .hero-btn-secondary");
   heroButtons.forEach((button) => {
     button.addEventListener("click", function (e) {
@@ -66,33 +57,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Close mobile menu when clicking outside
   document.addEventListener("click", function (e) {
     if (!navbar.contains(e.target)) {
       closeMobileMenu();
     }
   });
 
-  // Prevent mobile menu from closing when clicking inside it
   mobileMenu.addEventListener("click", function (e) {
     e.stopPropagation();
   });
 
-  // Add loading animation to buttons
   const buttons = document.querySelectorAll(".booking-btn, .hero-btn-primary, .hero-btn-secondary");
   buttons.forEach((button) => {
     button.addEventListener("click", function () {
-      // Add loading state
       this.classList.add("loading");
 
-      // Remove loading state after a short delay
       setTimeout(() => {
         this.classList.remove("loading");
       }, 1000);
     });
   });
 
-  // Intersection Observer for fade-in animations
   const observerOptions = {
     threshold: 0.1,
     rootMargin: "0px 0px -50px 0px",
@@ -106,13 +91,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }, observerOptions);
 
-  // Observe elements for fade-in animation
   const animatedElements = document.querySelectorAll(".service-card, .gallery-item, .testimonial-card");
   animatedElements.forEach((element) => {
     observer.observe(element);
   });
 
-  // Add hover effects to service cards
   const serviceCards = document.querySelectorAll(".service-card");
   serviceCards.forEach((card) => {
     card.addEventListener("mouseenter", function () {
@@ -124,13 +107,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Add pulse effect to booking buttons
   const bookingButtons = document.querySelectorAll(".booking-btn, .hero-btn-primary");
   bookingButtons.forEach((button) => {
     button.classList.add("pulse");
   });
 
-  // Parallax effect for hero section (desktop only)
   function handleParallax() {
     if (window.innerWidth > 768) {
       const scrolled = window.pageYOffset;
@@ -144,17 +125,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Add parallax effect on scroll (desktop only)
   if (window.innerWidth > 768) {
     window.addEventListener("scroll", handleParallax);
   }
 
-  // Handle window resize
   window.addEventListener("resize", function () {
-    // Close mobile menu on resize
     closeMobileMenu();
 
-    // Re-enable/disable parallax based on screen size
     if (window.innerWidth <= 768) {
       window.removeEventListener("scroll", handleParallax);
     } else {
@@ -162,20 +139,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Initialize navbar state
   handleNavbarScroll();
 
-  // Remove heavy global inline transitions to improve mobile performance
-  // Transitions are controlled via CSS for interactive elements only.
+  
 
-  // Booking form functionality
   function setupBookingForm() {
     const form = document.getElementById("booking-form");
     const treatmentSelect = document.getElementById("treatment");
     const durationSelect = document.getElementById("duration");
     const priceInput = document.getElementById("price");
 
-    // Custom time dropdown elements
     const timeInput = document.getElementById("booking-time");
     const timeButton = document.getElementById("time-dropdown-button");
     const timeButtonLabel = timeButton ? timeButton.querySelector("span") : null;
@@ -196,7 +169,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       };
 
-      // Pointer/touch/click open
       ["click", "touchstart"].forEach((evt) => {
         timeButton.addEventListener(evt, function (e) {
           e.preventDefault();
@@ -205,7 +177,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       });
 
-      // Keyboard support
       timeButton.addEventListener("keydown", function (e) {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
@@ -213,7 +184,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
-      // Handle option selection
       timeMenu.querySelectorAll("[data-value]").forEach((option) => {
         const selectValue = (value) => {
           timeInput.value = value;
@@ -233,7 +203,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       });
 
-      // Close menu when clicking outside
       ["click", "touchstart"].forEach((evt) => {
         document.addEventListener(evt, function (e) {
           if (!timeMenu.contains(e.target) && e.target !== timeButton) {
@@ -244,7 +213,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
-    // Price calculation based on treatment and duration
     const pricing = {
       "Hot Stone Therapy": { 60: 300000, 90: 380000, 120: 450000 },
       "Aromatherapy Massage": { 60: 280000, 90: 360000, 120: 440000 },
@@ -266,22 +234,18 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    // Update price when treatment or duration changes
     treatmentSelect.addEventListener("change", updatePrice);
     durationSelect.addEventListener("change", updatePrice);
 
-    // Form submission
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      // Get form data
       const formData = new FormData(form);
       const data = {};
       for (let [key, value] of formData.entries()) {
         data[key] = value;
       }
 
-      // Validate required fields
       const requiredFields = ["name", "email", "phone", "treatment", "duration", "date", "time", "therapist"];
       const missingFields = requiredFields.filter((field) => !data[field]);
 
@@ -290,10 +254,8 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      // Generate reference number
       const referenceNumber = "MS" + Math.random().toString(36).substr(2, 6).toUpperCase();
 
-      // Format date
       const dateObj = new Date(data.date);
       const formattedDate = dateObj.toLocaleDateString("id-ID", {
         weekday: "long",
@@ -302,7 +264,6 @@ document.addEventListener("DOMContentLoaded", function () {
         year: "numeric",
       });
 
-      // Create WhatsApp message
       const message = `BOOKING MAHALU SPA
 
 Halo Admin, ada booking baru:
@@ -325,26 +286,21 @@ Halo Admin, ada booking baru:
 
 Mohon konfirmasi booking ini. Terima kasih! 🙏`;
 
-      // Open WhatsApp
       const whatsappNumber = "+6289609094700";
       const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(message)}`;
 
-      // Add loading state to button
       const submitButton = document.getElementById("whatsapp-submit");
       const originalText = submitButton.innerHTML;
       submitButton.innerHTML = "Mengirim...";
       submitButton.disabled = true;
 
-      // Open WhatsApp after short delay
       setTimeout(() => {
         window.open(whatsappUrl, "_blank");
 
-        // Reset button
         setTimeout(() => {
           submitButton.innerHTML = originalText;
           submitButton.disabled = false;
 
-          // Reset form
           form.reset();
           priceInput.value = "";
           if (timeInput) {
@@ -359,13 +315,11 @@ Mohon konfirmasi booking ini. Terima kasih! 🙏`;
     });
   }
 
-  // Initialize booking form
   setupBookingForm();
 
-  // Initialize navbar booking buttons
   setupWhatsAppBooking();
 
-  // WhatsApp booking functionality for navbar buttons
+  // Tombol booking
   function setupWhatsAppBooking() {
     const bookingMessage = `BOOKING MAHALU SPA
 
@@ -378,21 +332,18 @@ Terima kasih! 🙏`;
     const whatsappNumber = "+6289609094700";
     const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(bookingMessage)}`;
 
-    // Handle navbar booking buttons (redirect to booking section)
     const bookingButtons = [document.getElementById("booking-btn"), document.getElementById("mobile-booking-btn"), document.getElementById("hero-booking-btn")];
 
     bookingButtons.forEach((button) => {
       if (button) {
         button.addEventListener("click", function (e) {
           e.preventDefault();
-          // Smooth scroll to booking section
           smoothScroll("#booking");
         });
       }
     });
   }
 
-  // Add elegant hover effects to gallery items
   const galleryItems = document.querySelectorAll(".gallery-item img");
   galleryItems.forEach((img) => {
     img.addEventListener("mouseenter", function () {
@@ -404,7 +355,6 @@ Terima kasih! 🙏`;
     });
   });
 
-  // Smooth reveal animation for sections (with graceful fallback)
   const sections = document.querySelectorAll("section");
   if ("IntersectionObserver" in window) {
     const sectionObserver = new IntersectionObserver(
@@ -428,14 +378,12 @@ Terima kasih! 🙏`;
       sectionObserver.observe(section);
     });
   } else {
-    // Fallback: ensure content is visible on browsers without IntersectionObserver
     sections.forEach((section) => {
       section.style.opacity = "1";
       section.style.transform = "none";
     });
   }
 
-  // Add loading state to external links
   const externalLinks = document.querySelectorAll('a[href^="http"]');
   externalLinks.forEach((link) => {
     link.addEventListener("click", function () {
@@ -449,7 +397,7 @@ Terima kasih! 🙏`;
   console.log("Mahalu Spa website loaded successfully! 🌸");
 });
 
-// Hero slideshow rotation
+// Hero slideshow
 const heroSlides = document.querySelectorAll(".hero-slideshow .hero-slide");
 if (heroSlides && heroSlides.length > 0) {
   let currentSlide = 0;
@@ -465,12 +413,10 @@ if (heroSlides && heroSlides.length > 0) {
     showSlide(currentSlide);
   }
 
-  // Start slideshow with fewer cycles and faster transition
   showSlide(0);
-  const HERO_INTERVAL_MS = 4000; // speed up
+  const HERO_INTERVAL_MS = 4000;
   let heroIntervalId = setInterval(nextSlide, HERO_INTERVAL_MS);
 
-  // Pause slideshow when tab hidden to save CPU
   if (typeof document.hidden !== "undefined") {
     document.addEventListener("visibilitychange", () => {
       if (document.hidden) {

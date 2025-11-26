@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="id">
   <head>
+    <!-- Head -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mahalu Spa - Temukan Ketenangan Jiwa & Raga</title>
     <meta name="description" content="Mahalu Spa menghadirkan pengalaman spa holistik dengan sentuhan tradisional Bali untuk keharmonisan tubuh, pikiran, dan jiwa." />
 
-    <!-- Fonts -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@300;400;500&display=swap" rel="stylesheet" />
 
-    <!-- Tailwind CSS -->
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -32,10 +33,10 @@
       };
     </script>
 
-    <!-- Custom CSS -->
+    
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Preload hero images for faster first paint -->
+    
     <link rel="preload" as="image" href="gambar/gambar1.jpg" fetchpriority="high" />
     <link rel="preload" as="image" href="gambar/gambar2.jpg" fetchpriority="high" />
     <link rel="preload" as="image" href="gambar/gambar3.jpg" fetchpriority="high" />
@@ -43,16 +44,17 @@
 
   <body class="font-sans text-charcoal">
     <!-- Navbar -->
+    
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out">
       <div class="max-w-7xl mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
-          <!-- Logo -->
+          
           <div class="flex items-center space-x-3">
             <img src="gambar/Logo2.png" alt="Mahalu Spa Logo" class="h-10 w-auto" loading="lazy" decoding="async" />
             <span class="text-beige font-serif text-xl font-medium">Mahalu Spa</span>
           </div>
 
-          <!-- Desktop Navigation -->
+          
           <div class="hidden md:flex items-center space-x-8">
             <a href="#beranda" class="nav-link text-beige hover:text-white transition-colors duration-300">Beranda</a>
             <a href="#layanan" class="nav-link text-beige hover:text-white transition-colors duration-300">Layanan</a>
@@ -61,7 +63,7 @@
             <a href="#" id="booking-btn" class="booking-btn bg-yellow-800 text-white px-6 py-2 rounded-full hover:bg-sienna transition-all duration-300 transform hover:scale-105">Booking</a>
           </div>
 
-          <!-- Mobile Menu Button -->
+          
           <button id="mobile-menu-btn" class="md:hidden text-beige hover:text-white transition-colors duration-300">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -69,7 +71,7 @@
           </button>
         </div>
 
-        <!-- Mobile Navigation -->
+        
         <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
           <div class="flex flex-col space-y-3">
             <a href="#beranda" class="nav-link text-beige hover:text-white transition-colors duration-300">Beranda</a>
@@ -82,9 +84,10 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
+    
+    <!-- Hero -->
     <section id="beranda" class="hero-section relative min-h-screen flex items-center justify-center">
-      <!-- Background Image -->
+      
       <div class="hero-slideshow absolute inset-0">
         <div class="hero-slide" style="background-image: url('gambar/gambar1.jpg')"></div>
         <div class="hero-slide" style="background-image: url('gambar/gambar2.jpg')"></div>
@@ -92,7 +95,7 @@
         <div class="absolute inset-0 bg-black bg-opacity-40"></div>
       </div>
 
-      <!-- Hero Content -->
+      
       <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
         <h1 class="hero-title font-serif text-4xl md:text-6xl lg:text-7xl font-light mb-6 leading-tight">
           Temukan Ketenangan<br />
@@ -103,7 +106,7 @@
           Rasakan pengalaman spa holistik dengan sentuhan tradisional Bali. Mahalu Spa menghadirkan keharmonisan antara tubuh, pikiran, dan jiwa melalui perawatan alami yang menenangkan.
         </p>
 
-        <!-- Hero Buttons -->
+        
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a href="#" id="hero-booking-btn" class="hero-btn-primary bg-clay text-white px-8 py-4 rounded-full text-lg font-medium shadow-lg"> Booking Sekarang </a>
           <a href="#layanan" class="hero-btn-secondary border-2 border-clay text-clay bg-white bg-opacity-90 px-8 py-4 rounded-full text-lg font-medium hover:bg-clay hover:text-white transition-all duration-300 transform hover:scale-105">
@@ -113,7 +116,8 @@
       </div>
     </section>
 
-    <!-- Layanan Section -->
+    
+    <!-- Layanan -->
     <section id="layanan" class="py-20 bg-beige bg-opacity-30">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-16">
@@ -122,7 +126,7 @@
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Service Card 1 -->
+          
           <div class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
             <div class="w-16 h-16 bg-clay bg-opacity-20 rounded-full flex items-center justify-center mb-6">
               <img src="icon/massage.png" alt="Ikon Massage Tradisional" class="w-8 h-8 object-contain" draggable="false" />
@@ -132,7 +136,7 @@
             <div class="text-clay font-semibold">Mulai dari Rp 250.000</div>
           </div>
 
-          <!-- Service Card 2 -->
+          
           <div class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
             <div class="w-16 h-16 bg-clay bg-opacity-20 rounded-full flex items-center justify-center mb-6">
               <img src="icon/facial-massage.png" alt="Ikon Facial Treatment" class="w-8 h-8 object-contain" draggable="false" />
@@ -142,7 +146,7 @@
             <div class="text-clay font-semibold">Mulai dari Rp 180.000</div>
           </div>
 
-          <!-- Service Card 3 -->
+          
           <div class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
             <div class="w-16 h-16 bg-clay bg-opacity-20 rounded-full flex items-center justify-center mb-6">
               <img src="icon/body-massage.png" alt="Ikon Body Scrub" class="w-8 h-8 object-contain" draggable="false" />
@@ -155,7 +159,8 @@
       </div>
     </section>
 
-    <!-- Galeri Section -->
+    
+    <!-- Galeri -->
     <section id="galeri" class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-16">
@@ -163,9 +168,9 @@
           <p class="text-lg text-charcoal opacity-80 max-w-2xl mx-auto">Lihat suasana tenang dan nyaman di Mahalu Spa</p>
         </div>
 
-        <!-- Bento-style symmetric grid -->
+        
         <div class="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-12 gap-4 auto-rows-[8rem] md:auto-rows-[10rem] lg:auto-rows-[12rem]">
-          <!-- Row 1: Medium - Large - Medium (perfectly symmetric) -->
+          
           <div class="gallery-item relative overflow-hidden rounded-xl bg-beige bg-opacity-30 col-span-2 md:col-span-2 lg:col-span-3 row-span-2">
             <img src="gambar/gambar (16).png" alt="Treatment Room" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy" decoding="async" />
           </div>
@@ -176,7 +181,7 @@
             <img src="gambar/gambar (34).png" alt="Relaxation Area" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy" decoding="async" />
           </div>
 
-          <!-- Row 3–4: Eight small tiles arranged symmetrically -->
+          
           <div class="gallery-item relative overflow-hidden rounded-xl bg-beige bg-opacity-30 col-span-1 md:col-span-3 lg:col-span-3 row-span-1">
             <img src="gambar/gambar (4).png" alt="Spa Products" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy" decoding="async" />
           </div>
@@ -205,7 +210,8 @@
       </div>
     </section>
 
-    <!-- Testimoni Section -->
+    
+    <!-- Testimoni -->
     <section id="testimoni" class="py-20 bg-beige bg-opacity-30">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-16">
@@ -215,7 +221,7 @@
 
         <div class="testimonial-carousel">
           <div class="carousel-track">
-            <!-- Sequence A: 8 testimonials -->
+            
             <div class="testimonial-card bg-white rounded-2xl p-8 shadow-lg">
               <div class="flex items-center mb-4">
                 <div class="w-12 h-12 bg-gray-50 bg-opacity-20 rounded-full flex items-center justify-center">
@@ -223,7 +229,7 @@
                 </div>
                 <div class="ml-4">
                   <h4 class="font-semibold text-charcoal">Sari Dewi</h4>
-                  <div class="flex text-yellow-400">★★★★★</div>
+                  <div class="flex text-yellow-400">â˜…â˜…â˜…â˜…â˜…</div>
                 </div>
               </div>
               <p class="text-charcoal opacity-80 italic">"Pengalaman spa yang luar biasa! Suasananya tenang dan pelayanannya profesional. Saya sangat rileks setelah treatment."</p>
@@ -236,7 +242,7 @@
                 </div>
                 <div class="ml-4">
                   <h4 class="font-semibold text-charcoal">Andi Pratama</h4>
-                  <div class="flex text-yellow-400">★★★★★</div>
+                  <div class="flex text-yellow-400">â˜…â˜…â˜…â˜…â˜…</div>
                 </div>
               </div>
               <p class="text-charcoal opacity-80 italic">"Massage tradisionalnya membantu menghilangkan stress dan ketegangan otot. Tempatnya bersih dan nyaman."</p>
@@ -249,7 +255,7 @@
                 </div>
                 <div class="ml-4">
                   <h4 class="font-semibold text-charcoal">Maya Sari</h4>
-                  <div class="flex text-yellow-400">★★★★★</div>
+                  <div class="flex text-yellow-400">â˜…â˜…â˜…â˜…â˜…</div>
                 </div>
               </div>
               <p class="text-charcoal opacity-80 italic">"Facial treatmentnya amazing! Kulit jadi lebih cerah dan halus. Pasti kembali lagi."</p>
@@ -262,7 +268,7 @@
                 </div>
                 <div class="ml-4">
                   <h4 class="font-semibold text-charcoal">Rina Putri</h4>
-                  <div class="flex text-yellow-400">★★★★★</div>
+                  <div class="flex text-yellow-400">â˜…â˜…â˜…â˜…â˜…</div>
                 </div>
               </div>
               <p class="text-charcoal opacity-80 italic">"Aromatherapy Massage sangat menenangkan. Terapisnya ramah dan profesional."</p>
@@ -275,7 +281,7 @@
                 </div>
                 <div class="ml-4">
                   <h4 class="font-semibold text-charcoal">Budi Santoso</h4>
-                  <div class="flex text-yellow-400">★★★★★</div>
+                  <div class="flex text-yellow-400">â˜…â˜…â˜…â˜…â˜…</div>
                 </div>
               </div>
               <p class="text-charcoal opacity-80 italic">"Hot Stone Therapy membuat badan terasa ringan. Recommended!"</p>
@@ -288,7 +294,7 @@
                 </div>
                 <div class="ml-4">
                   <h4 class="font-semibold text-charcoal">Nabila Rahma</h4>
-                  <div class="flex text-yellow-400">★★★★★</div>
+                  <div class="flex text-yellow-400">â˜…â˜…â˜…â˜…â˜…</div>
                 </div>
               </div>
               <p class="text-charcoal opacity-80 italic">"Body Scrubnya bikin kulit halus dan lembut. Suka banget!"</p>
@@ -301,7 +307,7 @@
                 </div>
                 <div class="ml-4">
                   <h4 class="font-semibold text-charcoal">Dimas Arya</h4>
-                  <div class="flex text-yellow-400">★★★★★</div>
+                  <div class="flex text-yellow-400">â˜…â˜…â˜…â˜…â˜…</div>
                 </div>
               </div>
               <p class="text-charcoal opacity-80 italic">"Reflexologynya mantap! Kaki terasa segar setelah sesi."</p>
@@ -314,13 +320,13 @@
                 </div>
                 <div class="ml-4">
                   <h4 class="font-semibold text-charcoal">Fitri Anisa</h4>
-                  <div class="flex text-yellow-400">★★★★★</div>
+                  <div class="flex text-yellow-400">â˜…â˜…â˜…â˜…â˜…</div>
                 </div>
               </div>
               <p class="text-charcoal opacity-80 italic">"Tempatnya bersih, stafnya ramah, pengalaman sangat menyenangkan."</p>
             </div>
 
-            <!-- Sequence B: duplicate for seamless looping -->
+            
             <div class="testimonial-card bg-white rounded-2xl p-8 shadow-lg">
               <div class="flex items-center mb-4">
                 <div class="w-12 h-12 bg-clay bg-opacity-20 rounded-full flex items-center justify-center">
@@ -328,7 +334,7 @@
                 </div>
                 <div class="ml-4">
                   <h4 class="font-semibold text-charcoal">Sari Dewi</h4>
-                  <div class="flex text-yellow-400">★★★★★</div>
+                  <div class="flex text-yellow-400">â˜…â˜…â˜…â˜…â˜…</div>
                 </div>
               </div>
               <p class="text-charcoal opacity-80 italic">"Pengalaman spa yang luar biasa! Suasananya tenang dan pelayanannya profesional. Saya sangat rileks setelah treatment."</p>
@@ -341,7 +347,7 @@
                 </div>
                 <div class="ml-4">
                   <h4 class="font-semibold text-charcoal">Andi Pratama</h4>
-                  <div class="flex text-yellow-400">★★★★★</div>
+                  <div class="flex text-yellow-400">â˜…â˜…â˜…â˜…â˜…</div>
                 </div>
               </div>
               <p class="text-charcoal opacity-80 italic">"Massage tradisionalnya membantu menghilangkan stress dan ketegangan otot. Tempatnya bersih dan nyaman."</p>
@@ -354,7 +360,7 @@
                 </div>
                 <div class="ml-4">
                   <h4 class="font-semibold text-charcoal">Maya Sari</h4>
-                  <div class="flex text-yellow-400">★★★★★</div>
+                  <div class="flex text-yellow-400">â˜…â˜…â˜…â˜…â˜…</div>
                 </div>
               </div>
               <p class="text-charcoal opacity-80 italic">"Facial treatmentnya amazing! Kulit jadi lebih cerah dan halus. Pasti kembali lagi."</p>
@@ -367,7 +373,7 @@
                 </div>
                 <div class="ml-4">
                   <h4 class="font-semibold text-charcoal">Rina Putri</h4>
-                  <div class="flex text-yellow-400">★★★★★</div>
+                  <div class="flex text-yellow-400">â˜…â˜…â˜…â˜…â˜…</div>
                 </div>
               </div>
               <p class="text-charcoal opacity-80 italic">"Aromatherapy Massage sangat menenangkan. Terapisnya ramah dan profesional."</p>
@@ -380,7 +386,7 @@
                 </div>
                 <div class="ml-4">
                   <h4 class="font-semibold text-charcoal">Budi Santoso</h4>
-                  <div class="flex text-yellow-400">★★★★★</div>
+                  <div class="flex text-yellow-400">â˜…â˜…â˜…â˜…â˜…</div>
                 </div>
               </div>
               <p class="text-charcoal opacity-80 italic">"Hot Stone Therapy membuat badan terasa ringan. Recommended!"</p>
@@ -393,7 +399,7 @@
                 </div>
                 <div class="ml-4">
                   <h4 class="font-semibold text-charcoal">Nabila Rahma</h4>
-                  <div class="flex text-yellow-400">★★★★★</div>
+                  <div class="flex text-yellow-400">â˜…â˜…â˜…â˜…â˜…</div>
                 </div>
               </div>
               <p class="text-charcoal opacity-80 italic">"Body Scrubnya bikin kulit halus dan lembut. Suka banget!"</p>
@@ -406,7 +412,7 @@
                 </div>
                 <div class="ml-4">
                   <h4 class="font-semibold text-charcoal">Dimas Arya</h4>
-                  <div class="flex text-yellow-400">★★★★★</div>
+                  <div class="flex text-yellow-400">â˜…â˜…â˜…â˜…â˜…</div>
                 </div>
               </div>
               <p class="text-charcoal opacity-80 italic">"Reflexologynya mantap! Kaki terasa segar setelah sesi."</p>
@@ -419,7 +425,7 @@
                 </div>
                 <div class="ml-4">
                   <h4 class="font-semibold text-charcoal">Fitri Anisa</h4>
-                  <div class="flex text-yellow-400">★★★★★</div>
+                  <div class="flex text-yellow-400">â˜…â˜…â˜…â˜…â˜…</div>
                 </div>
               </div>
               <p class="text-charcoal opacity-80 italic">"Tempatnya bersih, stafnya ramah, pengalaman sangat menyenangkan."</p>
@@ -429,19 +435,20 @@
       </div>
     </section>
 
-    <!-- Booking Section -->
+    
+    <!-- Booking -->
     <section id="booking" class="py-20 bg-white">
       <div class="max-w-4xl mx-auto px-6 text-center">
         <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal mb-4">Booking Sekarang</h2>
         <p class="text-lg text-charcoal opacity-80 mb-12 max-w-2xl mx-auto">Isi form booking dan nikmati pengalaman spa yang tak terlupakan</p>
 
         <div class="bg-beige bg-opacity-30 rounded-2xl p-8 md:p-12">
-          <!-- Booking Form -->
+          
           <form id="booking-form" class="text-left">
             <div class="grid md:grid-cols-2 gap-6">
-              <!-- Left Column -->
+              
               <div class="space-y-6">
-                <!-- Name -->
+                
                 <div>
                   <label for="customer-name" class="block text-sm font-medium text-charcoal mb-2">Nama Lengkap</label>
                   <input
@@ -453,7 +460,7 @@
                   />
                 </div>
 
-                <!-- Email -->
+                
                 <div>
                   <label for="customer-email" class="block text-sm font-medium text-charcoal mb-2">Email</label>
                   <input
@@ -465,7 +472,7 @@
                   />
                 </div>
 
-                <!-- Phone -->
+                
                 <div>
                   <label for="customer-phone" class="block text-sm font-medium text-charcoal mb-2">No. Telepon</label>
                   <input
@@ -477,7 +484,7 @@
                   />
                 </div>
 
-                <!-- Treatment -->
+                
                 <div>
                   <label for="treatment" class="block text-sm font-medium text-charcoal mb-2">Treatment</label>
                   <select id="treatment" name="treatment" required class="w-full px-4 py-3 border border-clay border-opacity-30 rounded-xl focus:outline-none focus:ring-2 focus:ring-clay focus:border-clay transition-colors bg-white">
@@ -492,9 +499,9 @@
                 </div>
               </div>
 
-              <!-- Right Column -->
+              
               <div class="space-y-6">
-                <!-- Duration -->
+                
                 <div>
                   <label for="duration" class="block text-sm font-medium text-charcoal mb-2">Durasi</label>
                   <select id="duration" name="duration" required class="w-full px-4 py-3 border border-clay border-opacity-30 rounded-xl focus:outline-none focus:ring-2 focus:ring-clay focus:border-clay transition-colors bg-white">
@@ -505,13 +512,13 @@
                   </select>
                 </div>
 
-                <!-- Price -->
+                
                 <div>
                   <label for="price" class="block text-sm font-medium text-charcoal mb-2">Harga</label>
                   <input type="text" id="price" name="price" readonly class="w-full px-4 py-3 border border-clay border-opacity-30 rounded-xl bg-gray-50 text-charcoal" />
                 </div>
 
-                <!-- Date -->
+                
                 <div>
                   <label for="booking-date" class="block text-sm font-medium text-charcoal mb-2">Tanggal</label>
                   <input
@@ -523,14 +530,14 @@
                   />
                 </div>
 
-                <!-- Time -->
+                
                 <div>
                   <label for="booking-time" class="block text-sm font-medium text-charcoal mb-2">Waktu</label>
                   <div class="relative">
-                    <!-- Hidden input used by the form -->
+                    
                     <input type="hidden" id="booking-time" name="time" />
 
-                    <!-- Visible custom dropdown trigger -->
+                    
                     <button
                       type="button"
                       id="time-dropdown-button"
@@ -544,9 +551,9 @@
                       </svg>
                     </button>
 
-                    <!-- Dropdown menu with internal scrolling -->
+                    
                     <div id="time-dropdown-menu" class="hidden absolute z-50 mt-2 w-full bg-white border border-clay border-opacity-30 rounded-xl shadow-lg max-h-48 overflow-y-auto">
-                      <div class="py-1" role="listbox" aria-label="Pilih Waktu (10:00–22:00 WIB)">
+                      <div class="py-1" role="listbox" aria-label="Pilih Waktu (10:00â€“22:00 WIB)">
                         <button type="button" role="option" data-value="10:00 WIB" class="w-full text-left px-4 py-2 hover:bg-beige hover:bg-opacity-30 text-charcoal">10:00 WIB</button>
                         <button type="button" role="option" data-value="11:00 WIB" class="w-full text-left px-4 py-2 hover:bg-beige hover:bg-opacity-30 text-charcoal">11:00 WIB</button>
                         <button type="button" role="option" data-value="12:00 WIB" class="w-full text-left px-4 py-2 hover:bg-beige hover:bg-opacity-30 text-charcoal">12:00 WIB</button>
@@ -567,7 +574,7 @@
               </div>
             </div>
 
-            <!-- Therapist (Full Width) -->
+            
             <div class="mt-6">
               <label for="therapist" class="block text-sm font-medium text-charcoal mb-2">Terapis</label>
               <select id="therapist" name="therapist" required class="w-full px-4 py-3 border border-clay border-opacity-30 rounded-xl focus:outline-none focus:ring-2 focus:ring-clay focus:border-clay transition-colors bg-white">
@@ -580,7 +587,7 @@
               </select>
             </div>
 
-            <!-- Submit Button -->
+            
             <div class="mt-8 text-center">
               <button type="submit" id="whatsapp-submit" class="inline-block bg-clay text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-sienna transition-all duration-300 transform hover:scale-105 shadow-lg">
                 <svg class="w-6 h-6 inline-block mr-2" fill="currentColor" viewBox="0 0 24 24">
@@ -596,7 +603,8 @@
       </div>
     </section>
 
-    <!-- Location Section -->
+    
+    <!-- Lokasi -->
     <section id="location" class="py-20 bg-beige bg-opacity-30">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-16">
@@ -605,7 +613,7 @@
         </div>
 
         <div class="grid lg:grid-cols-2 gap-12 items-stretch">
-          <!-- Address Information -->
+          
           <div class="space-y-8">
             <div class="bg-white rounded-2xl p-8 shadow-lg">
               <div class="flex items-start space-x-4">
@@ -621,7 +629,7 @@
               </div>
             </div>
 
-            <!-- Operating Hours -->
+            
             <div class="bg-white rounded-2xl p-8 shadow-lg">
               <div class="flex items-start space-x-4">
                 <div class="w-12 h-12 bg-clay bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
@@ -640,7 +648,7 @@
             </div>
           </div>
 
-          <!-- Google Map -->
+          
           <div class="bg-white rounded-2xl p-4 shadow-lg h-full flex flex-col">
             <div class="rounded-xl overflow-hidden flex-1">
               <iframe
@@ -676,6 +684,7 @@
       </div>
     </section>
 
+    
     <!-- Footer -->
     <footer class="bg-charcoal text-beige py-12">
       <div class="max-w-7xl mx-auto px-6">
@@ -716,7 +725,8 @@
       </div>
     </footer>
 
-    <!-- JavaScript -->
+    
+    <!-- Scripts -->
     <script src="script.js" defer></script>
   </body>
 </html>

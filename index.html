@@ -32,15 +32,15 @@
         },
       };
     </script>
-
-    
     <link rel="stylesheet" href="style.css" />
-
-    
     <link rel="preload" as="image" href="gambar/gambar1.jpg" fetchpriority="high" />
     <link rel="preload" as="image" href="gambar/gambar2.jpg" fetchpriority="high" />
     <link rel="preload" as="image" href="gambar/gambar3.jpg" fetchpriority="high" />
   </head>
+  <div id="imgModal" class="img-modal hidden">
+  <span id="closeImg">&times;</span>
+  <img id="imgPreview">
+</div>
 
   <body class="font-sans text-charcoal">
     <!-- Navbar -->
@@ -60,7 +60,7 @@
             <a href="#layanan" class="nav-link text-beige hover:text-white transition-colors duration-300">Layanan</a>
             <a href="#galeri" class="nav-link text-beige hover:text-white transition-colors duration-300">Galeri</a>
             <a href="#testimoni" class="nav-link text-beige hover:text-white transition-colors duration-300">Testimoni</a>
-            <a href="#" id="booking-btn" class="booking-btn bg-yellow-800 text-white px-6 py-2 rounded-full hover:bg-sienna transition-all duration-300 transform hover:scale-105">Booking</a>
+            <a href="https://widget.zenwel.com/677947049/mahalu-spa-nail-art?lang=id&lid=16501" id="booking-btn" class="booking-btn bg-yellow-800 text-white px-6 py-2 rounded-full hover:bg-sienna transition-all duration-300 transform hover:scale-105">Booking</a>
           </div>
 
           
@@ -94,19 +94,14 @@
         <div class="hero-slide" style="background-image: url('gambar/gambar3.jpg')"></div>
         <div class="absolute inset-0 bg-black bg-opacity-40"></div>
       </div>
-
-      
       <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
         <h1 class="hero-title font-serif text-4xl md:text-6xl lg:text-7xl font-light mb-6 leading-tight">
           Temukan Ketenangan<br />
           <span class="text-beige">Jiwa & Raga</span>
         </h1>
-
         <p class="hero-subtitle text-lg md:text-xl lg:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed font-light">
           Rasakan pengalaman spa holistik dengan sentuhan tradisional Bali. Mahalu Spa menghadirkan keharmonisan antara tubuh, pikiran, dan jiwa melalui perawatan alami yang menenangkan.
         </p>
-
-        
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a href="https://widget.zenwel.com/677947049/mahalu-spa-nail-art?lang=id&lid=16501" id="hero-booking-btn" class="hero-btn-primary bg-clay text-white px-8 py-4 rounded-full text-lg font-medium shadow-lg"> Booking Sekarang </a>
           <a href="#layanan" class="hero-btn-secondary border-2 border-clay text-clay bg-white bg-opacity-90 px-8 py-4 rounded-full text-lg font-medium hover:bg-clay hover:text-white transition-all duration-300 transform hover:scale-105">
@@ -115,8 +110,6 @@
         </div>
       </div>
     </section>
-
-    
     <!-- Layanan -->
     <section id="layanan" class="py-20 bg-beige bg-opacity-30">
       <div class="max-w-7xl mx-auto px-6">
@@ -124,100 +117,68 @@
           <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal mb-4">Layanan Kami</h2>
           <p class="text-lg text-charcoal opacity-80 max-w-2xl mx-auto">Nikmati berbagai perawatan spa yang dirancang khusus untuk memberikan ketenangan dan kesehatan optimal</p>
         </div>
-
         <div class="overflow-x-auto">
   <div class="flex gap-6 w-max pb-4">
-
-      
         <div class="overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4">
   <div class="flex gap-4">
-
     <img src="gambar/1.jpg"
       class="snap-center w-[80vw] sm:w-[60vw] md:w-[40vw] lg:w-[600px] h-auto rounded-2xl shadow-lg object-cover flex-shrink-0"
       draggable="false" />
-
     <img src="gambar/3.jpg"
       class="snap-center w-[80vw] sm:w-[60vw] md:w-[40vw] lg:w-[600px] h-auto rounded-2xl shadow-lg object-cover flex-shrink-0"
       draggable="false" />
-
     <img src="gambar/4.jpg"
       class="snap-center w-[80vw] sm:w-[60vw] md:w-[40vw] lg:w-[600px] h-auto rounded-2xl shadow-lg object-cover flex-shrink-0"
       draggable="false" />
-
     <img src="gambar/5.jpg"
       class="snap-center w-[80vw] sm:w-[60vw] md:w-[40vw] lg:w-[600px] h-auto rounded-2xl shadow-lg object-cover flex-shrink-0"
       draggable="false" />
-
     <img src="gambar/6.jpg"
       class="snap-center w-[80vw] sm:w-[60vw] md:w-[40vw] lg:w-[600px] h-auto rounded-2xl shadow-lg object-cover flex-shrink-0"
       draggable="false" />
-
     <img src="gambar/2.jpg"
       class="snap-center w-[80vw] sm:w-[60vw] md:w-[40vw] lg:w-[600px] h-auto rounded-2xl shadow-lg object-cover flex-shrink-0"
       draggable="false" />
-
-  </div>
-</div>
-
-
-  </div>
-</div>
-
+        </div>
       </div>
-    </section>
-
-    
-    <!-- Galeri -->
-    <section id="galeri" class="py-20 bg-white">
+        </div>
+      </div>
+            </div>
+          </section>
+        <!-- Galeri -->
+          <section id="galeri" class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal mb-4">Galeri</h2>
-          <p class="text-lg text-charcoal opacity-80 max-w-2xl mx-auto">Lihat suasana tenang dan nyaman di Mahalu Spa</p>
+          <h2 class="font-serif text-4xl text-charcoal mb-4">Galeri</h2>
+          <p class="text-lg text-charcoal opacity-80">Suasana eksklusif Mahalu Spa</p>
         </div>
+        <div class="gallery-grid">
+          <div class="gallery-item large"><img src="img/1.JPG"></div>
+          <div class="gallery-item tall"><img src="img/2.JPG"></div>
+          <div class="gallery-item"><img src="img/3.jpg"></div>
+          <div class="gallery-item wide"><img src="img/4.jpg"></div>
+          <div class="gallery-item"><img src="img/14.JPG"></div>
+          <div class="gallery-item"><img src="img/16.JPG"></div>
+          <div class="gallery-item tall"><img src="img/15.JPG"></div>
+          <div class="gallery-item"><img src="img/11.JPG"></div>
+          <div class="gallery-item wide"><img src="img/21.jpg"></div>
+          <div class="gallery-item"><img src="gambar/gambar (9).png"></div>
+          <div class="gallery-item"><img src="gambar/gambar (32).png"></div>
+          <div class="gallery-item"><img src="img/9.jpg"></div>
+          <div class="gallery-item large"><img src="img/18.JPG"></div>
+          <div class="gallery-item"><img src="img/20.jpg"></div>
+          <div class="gallery-item"><img src="img/19.jpg"></div>
+          <div class="gallery-item"><img src="img/15.JPG"></div>
+          <div class="gallery-item wide"><img src="img/17.JPG"></div>
+          <div class="gallery-item"><img src="img/10.jpg"></div>
+          <div class="gallery-item"><img src="img/5.jpg"></div>
+          <div class="gallery-item"><img src="img/6.jpg"></div>
+          <div class="gallery-item"><img src="img/12.JPG"></div>
 
-        
-        <div class="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-12 gap-4 auto-rows-[8rem] md:auto-rows-[10rem] lg:auto-rows-[12rem]">
-          
-          <div class="gallery-item relative overflow-hidden rounded-xl bg-beige bg-opacity-30 col-span-2 md:col-span-2 lg:col-span-3 row-span-2">
-            <img src="gambar/gambar (16).png" alt="Treatment Room" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy" decoding="async" />
-          </div>
-          <div class="gallery-item relative overflow-hidden rounded-xl bg-beige bg-opacity-30 col-span-2 md:col-span-2 lg:col-span-6 row-span-2">
-            <img src="gambar/gambar (41).png" alt="Spa Interior" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy" decoding="async" />
-          </div>
-          <div class="gallery-item relative overflow-hidden rounded-xl bg-beige bg-opacity-30 col-span-2 md:col-span-2 lg:col-span-3 row-span-2">
-            <img src="gambar/gambar (34).png" alt="Relaxation Area" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy" decoding="async" />
-          </div>
-
-          
-          <div class="gallery-item relative overflow-hidden rounded-xl bg-beige bg-opacity-30 col-span-1 md:col-span-3 lg:col-span-3 row-span-1">
-            <img src="gambar/gambar (4).png" alt="Spa Products" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy" decoding="async" />
-          </div>
-          <div class="gallery-item relative overflow-hidden rounded-xl bg-beige bg-opacity-30 col-span-1 md:col-span-3 lg:col-span-3 row-span-1">
-            <img src="gambar/gambar (14).jpg" alt="Details" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy" decoding="async" />
-          </div>
-          <div class="gallery-item relative overflow-hidden rounded-xl bg-beige bg-opacity-30 col-span-1 md:col-span-3 lg:col-span-3 row-span-1">
-            <img src="gambar/gambar (5).JPG" alt="Ambience" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy" decoding="async" />
-          </div>
-          <div class="gallery-item relative overflow-hidden rounded-xl bg-beige bg-opacity-30 col-span-1 md:col-span-3 lg:col-span-3 row-span-1">
-            <img src="gambar/gambar (11).JPG" alt="Client Experience" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy" decoding="async" />
-          </div>
-          <div class="gallery-item relative overflow-hidden rounded-xl bg-beige bg-opacity-30 col-span-1 md:col-span-3 lg:col-span-3 row-span-1">
-            <img src="gambar/gambar (12).JPG" alt="Decor" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy" decoding="async" />
-          </div>
-          <div class="gallery-item relative overflow-hidden rounded-xl bg-beige bg-opacity-30 col-span-1 md:col-span-3 lg:col-span-3 row-span-1">
-            <img src="gambar/gambar (26).png" alt="Treatment Detail" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy" decoding="async" />
-          </div>
-          <div class="gallery-item relative overflow-hidden rounded-xl bg-beige bg-opacity-30 col-span-1 md:col-span-3 lg:col-span-3 row-span-1">
-            <img src="gambar/gambar (52).png" alt="Welcome Area" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy" decoding="async" />
-          </div>
-          <div class="gallery-item relative overflow-hidden rounded-xl bg-beige bg-opacity-30 col-span-1 md:col-span-3 lg:col-span-3 row-span-1">
-            <img src="gambar/gambar (32).png" alt="Interior Detail" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy" decoding="async" />
-          </div>
         </div>
       </div>
     </section>
 
-    
     <!-- Testimoni -->
     <section id="testimoni" class="py-20 bg-beige bg-opacity-30">
       <div class="max-w-7xl mx-auto px-6">

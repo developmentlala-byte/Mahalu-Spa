@@ -318,10 +318,11 @@ Mohon konfirmasi booking ini. Terima kasih! 🙏`;
   setupBookingForm();
 
   setupWhatsAppBooking();
+/* --- WHATSAPP FORM SUBMIT --- */
+const whatsappNumber = "+6289609094700";
 
-  // Tombol booking
-  function setupWhatsAppBooking() {
-    const bookingMessage = `BOOKING MAHALU SPA
+function setupWhatsAppBooking() {
+  const bookingMessage = `BOOKING MAHALU SPA
 
 Halo Admin, saya tertarik untuk melakukan booking spa.
 
@@ -329,22 +330,58 @@ Mohon informasi lebih lanjut mengenai ketersediaan jadwal dan layanan yang terse
 
 Terima kasih! 🙏`;
 
-    const whatsappNumber = "+6289609094700";
-    const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(bookingMessage)}`;
+  const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(bookingMessage)}`;
 
-    const bookingButtons = [document.getElementById("booking-btn"), document.getElementById("mobile-booking-btn"), document.getElementById("hero-booking-btn")];
+  const bookingButtons = [
+    document.getElementById("booking-btn"),
+    document.getElementById("mobile-booking-btn"),
+    document.getElementById("hero-booking-btn"),
+  ];
 
-    bookingButtons.forEach((button) => {
-      if (button) {
-        button.addEventListener("click", function (e) {
-          e.preventDefault();
-          smoothScroll("#booking");
-        });
-      }
+  bookingButtons.forEach((button) => {
+    if (!button) return;
+
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector("#booking")?.scrollIntoView({ behavior: "smooth" });
     });
-  }
+  });
+}
 
+/* --- MODAL IMAGE GALLERY --- */
+function setupImageModal() {
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("imgPreview");
+  const closeBtn = document.getElementById("closeImg");
+
+  if (!modal || !modalImg || !closeBtn) return;
+
+  const galleryImages = document.querySelectorAll(".gallery-item img");
+
+  galleryImages.forEach((img) => {
+    img.style.cursor = "zoom-in";
+
+    img.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+      modalImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+    }
+  });
+}
+
+/* --- HOVER EFFECT GALLERY --- */
+function setupGalleryHover() {
   const galleryItems = document.querySelectorAll(".gallery-item img");
+
   galleryItems.forEach((img) => {
     img.addEventListener("mouseenter", function () {
       this.style.filter = "brightness(1.1) contrast(1.1)";
@@ -354,6 +391,15 @@ Terima kasih! 🙏`;
       this.style.filter = "brightness(1) contrast(1)";
     });
   });
+}
+
+/* --- AUTO RUN SETUP --- */
+document.addEventListener("DOMContentLoaded", function () {
+  setupWhatsAppBooking();
+  setupImageModal();
+  setupGalleryHover();
+});
+
 
   const sections = document.querySelectorAll("section");
   if ("IntersectionObserver" in window) {

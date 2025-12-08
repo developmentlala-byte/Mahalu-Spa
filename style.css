@@ -405,6 +405,9 @@ iframe {
   );
 }
 
+* {
+  scroll-snap-type: x mandatory;
+}
 
 .testimonial-carousel::after {
   right: 0;

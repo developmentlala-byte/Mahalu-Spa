@@ -307,7 +307,7 @@ Mohon konfirmasi booking ini. Terima kasih! 🙏`;
             timeInput.value = "";
           }
           if (timeButton) {
-            timeButton.textContent = "Pilih Waktu (10:00–22:00 WIB)";
+            timeButton.textContent = "Pilih Waktu (10:00–20:00 WIB)";
             timeButton.setAttribute("aria-expanded", "false");
           }
         }, 1000);

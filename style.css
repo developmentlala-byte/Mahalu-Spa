@@ -123,93 +123,97 @@ body {
   border-color: rgba(196, 122, 83, 0.3);
   box-shadow: 0 10px 30px rgba(196, 122, 83, 0.15);
 }
-
-.gallery-grid{
+.gallery-grid {
 display: grid;
 grid-template-columns: repeat(6, 1fr);
-grid-auto-rows: 190px;
-gap: 16px;
+grid-auto-rows: 170px;
+gap: 5px;
 grid-auto-flow: dense;
 }
 
-.gallery-item{
+/* Box gambar */
+.gallery-item {
 position: relative;
-border-radius: 22px;
+border-radius: 20px;
 overflow: hidden;
-box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+background: #fff;
 }
 
-.gallery-item img{
+/* Gambar */
+.gallery-item img {
 width: 100%;
 height: 100%;
 object-fit: cover;
-transition: transform 0.45s ease;
+display: block;
+transition: transform 0.4s ease, filter 0.4s ease;
 }
 
-.gallery-item:hover img{
-transform: scale(1.05);
+/* Hover */
+.gallery-item:hover img {
+transform: scale(1.04);
+filter: brightness(1.05);
 }
 
-.gallery-item.large{
+/* Varian ukuran */
+.gallery-item.large {
 grid-column: span 3;
 grid-row: span 3;
 }
 
-.gallery-item.tall{
+.gallery-item.tall {
 grid-row: span 2;
 }
 
-.gallery-item.wide{
+.gallery-item.wide {
 grid-column: span 2;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1024px){
-.gallery-grid{
+/* Tablet */
+@media (max-width: 1024px) {
+.gallery-grid {
 grid-template-columns: repeat(3, 1fr);
+grid-auto-rows: 150px;
+gap: 8px;
 }
 
-.gallery-item.large{
+.gallery-item.large {
 grid-column: span 2;
 grid-row: span 2;
 }
 }
 
-@media (max-width: 640px){
-.gallery-grid{
+/* Mobile */
+@media (max-width: 640px) {
+.gallery-grid {
 grid-template-columns: repeat(2, 1fr);
-grid-auto-rows: 180px;
+grid-auto-rows: 140px;
+gap: 6px;
 }
 
-.gallery-item{
+.gallery-item {
 border-radius: 16px;
 }
 
-.gallery-item img{
-width:100%;
-height:100%;
-object-fit: cover;
-}
-
-.gallery-item.large{
+.gallery-item.large {
 grid-column: span 2;
 grid-row: span 2;
 }
 
-.gallery-item.wide{
+.gallery-item.wide {
 grid-column: span 2;
 }
 
-.gallery-item.tall{
-grid-row: span 2;
+.gallery-item.tall {
+grid-row: span 1;
 }
 }
 
-/* MODAL */
+/* Modal */
 .img-modal {
 position: fixed;
 inset: 0;
-background: rgba(0,0,0,0.85);
+background: rgba(0, 0, 0, 0.85);
 display: flex;
 align-items: center;
 justify-content: center;
@@ -228,42 +232,12 @@ border-radius: 18px;
 
 #closeImg {
 position: absolute;
-top: 18px;
-right: 24px;
+top: 20px;
+right: 25px;
 font-size: 38px;
-color: #fff;
+color: #ffffff;
 cursor: pointer;
 }
-
-@media(max-width:1024px){
-  .gallery-grid{
-    grid-template-columns:repeat(3,1fr);
-    grid-auto-rows:160px;
-  }
-}
-
-@media(max-width:640px){
-  .gallery-grid{
-    grid-template-columns:repeat(2,1fr);
-    grid-auto-rows:140px;
-  }
-}
-
-
-@media(max-width:1024px){
-  .gallery-grid{
-    grid-template-columns:repeat(3,1fr);
-    grid-auto-rows:160px;
-  }
-}
-
-@media(max-width:640px){
-  .gallery-grid{
-    grid-template-columns:repeat(2,1fr);
-    grid-auto-rows:140px;
-  }
-}
-
 
 .testimonial-card {
   transition: all 0.3s ease;
@@ -335,6 +309,35 @@ iframe {
   outline: 2px solid #f1e5d0;
   outline-offset: 2px;
 }
+
+.booking-box {
+display: flex;
+justify-content: center;
+padding: 36px 24px;
+border-radius: 20px;
+background: rgba(241,229,208,0.45);
+max-width: 520px;
+margin: 0 auto;
+}
+
+.booking-btn-premium {
+background: linear-gradient(135deg, #c47a53, #a65c38);
+color: #fff;
+padding: 16px 44px;
+font-size: 18px;
+font-weight: 600;
+border-radius: 999px;
+box-shadow: 0 10px 30px rgba(196,122,83,0.35);
+transition: all .25s ease;
+text-decoration: none;
+}
+
+.booking-btn-premium:hover {
+transform: translateY(-2px) scale(1.03);
+box-shadow: 0 14px 35px rgba(196,122,83,0.45);
+}
+
+Perubahan utama yang kubu
 
 
 ::-webkit-scrollbar {
